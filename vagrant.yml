@@ -1,0 +1,14 @@
+---
+hosts:
+    jenkins:
+      eth1: 172.28.129.10
+      memory: 1024
+      cpus: 1
+      ports:
+        - guest: 8080
+          host: 8080
+    slave:
+      eth1: 172.28.129.11
+      memory: 512
+      cpus: 1
+ 
