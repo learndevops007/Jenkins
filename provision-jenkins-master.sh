@@ -2,8 +2,6 @@
 
 echo "running jenkins-master provisioning.."
 
-# install git maven
-sudo apt-get install -y git maven
 
 if [ ! -f /swapfile ]; then
   # add swapfile
@@ -25,3 +23,5 @@ if [ ! -f /etc/init.d/jenkins ]; then
   sudo update-rc.d jenkins defaults
   sudo service jenkins start
 fi
+# install git maven
+sudo apt-get install -y git maven

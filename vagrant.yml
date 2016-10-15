@@ -11,4 +11,32 @@ hosts:
       eth1: 172.28.129.11
       memory: 512
       cpus: 1
- 
+artifactory:
+      eth1: 172.28.129.12
+      memory: 1024
+      cpus: 1
+      ports:
+        - guest: 8081
+          host: 7080
+    test:
+      eth1: 172.28.129.13
+      memory: 512
+      cpus: 1
+      ports:
+        - guest: 8080
+          host: 6080
+    stage:
+      eth1: 172.28.129.14
+      memory: 512
+      cpus: 1
+      ports:
+        - guest: 8080
+          host: 5080
+    prod:
+      eth1: 172.28.129.15
+      memory: 512
+      cpus: 1
+      ports:
+        - guest: 8080
+          host: 4080
+

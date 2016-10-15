@@ -47,6 +47,9 @@ Vagrant.configure('2') do |config|
             elsif host_name.include? "slave"
               host.vm.provision "shell", path: "install_oracle_jdk_8.sh"
               host.vm.provision "shell", path: "provision-jenkins-slave.sh"
+            elsif host_name.include? "artifactory"
+              host.vm.provision "shell", path: "install_oracle_jdk_8.sh"
+              host.vm.provision "shell", path: "provision-artifactory.sh"
             else
               host.vm.provision "shell", path: "install_tomcat.sh"
             end
